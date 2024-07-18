@@ -1,0 +1,237 @@
+<HTML><HEAD> <TITLE>Teaching "Thinky" Programming</TITLE>
+<HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#000080" alink="#0000FF" vlink="#000080">
+<FONT color="#000000">
+<div style="margin-left:10px; margin-top:0px; margin-bottom:0px; width:690px">
+<CENTER>
+<h3>
+<a href="http://www.computingatschool.org.uk/">
+<img alt="Computing At School"
+height="60" src="../ova/images/student-squaresSmall.png"/>
+<font size=4><b>Computing At School</b></font>
+</a>
+<p>
+<small>
+<a href="http://www.cs.bham.ac.uk/"> School of Computer Science</a>
+--
+<a href="http://www.cs.bham.ac.uk/"> The University of Birmingham</a>
+<br>
+In collaboration with
+The University of Sussex: <a href="http://www.sussex.ac.uk/cogs">Centre
+for Research in Cognitive Science</a>
+</small>
+<p>
+<small>
+This is part of the
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/freepoplog.html">Free Poplog Portal</a>
+<br>
+All the tools required to run the examples below are
+<br/>
+AVAILABLE FOR
+USE FREE OF CHARGE, WITH OPEN SOURCE
+<br/>
+in Linux or in VirtualBox on Windows or Apple OSX,
+<br/>
+as
+described in
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/ova/">http://www.cs.bham.ac.uk/research/projects/poplog/ova/</a>
+<br>
+Enquiries to A.Sloman@cs.bham.ac.uk
+<br>
+(This is all free and open source software, thanks to the Universities
+of Sussex and Birmingham.)
+</small>
+<br/>
+</h3>
+</CENTER>
+<hr/>
+<p>
+<h2><b>
+Tips on Teaching "Thinky" Programming
+</b></h2>
+<small>
+Link to this web site:
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/thinky.html">http://www.cs.bham.ac.uk/research/projects/poplog/examples/thinky.html</a>
+<br/>
+Many examples of thinky (and some other) types of programming can be
+found in
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/examples.html">http://www.cs.bham.ac.uk/research/projects/poplog/examples/examples.html</a>
+<br/>
+Video tutorials on some of this material:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/cas-ai/video-tutorials.html">http://www.cs.bham.ac.uk/research/projects/poplog/cas-ai/video-tutorials.html</a>
+<br>
+</small>
+
+<h3><b>
+Introduction
+</b></h3>
+<blockquote>
+The idea of "Thinky" programming is introduced on <a href="examples.html#tasks">this</a>
+web
+page, which also introduces several other types of programming,
+including numbery, bumpy, gadgety,
+arty, and exploratory programming. (The
+categories are not all mutually exclusive.)
+<p>
+The key features of "thinky" programming includes getting a computer to
+perform some cognitive task that is similar to or inspired by things
+humans or other animals can do, such as seeing, planning, playing a
+game, or using a natural language to communicate, such as English of
+Urdu. This has typically been the domain of research in AI and cognitive
+science, and is very difficult to do well enough to match human and
+animal competences. But it is possible to introduce some of the ideas
+and techniques by focusing on simplified versions of those tasks,
+samples of which are provided <a href="examples.html#introductory">here.</a>
+</blockquote>
+<h3><b>
+How to simplify the introductory examples
+</b></h3>
+<blockquote>
+In general developing working "thinky" programming can be very difficult
+partly because of the need to provide the program with access to
+whatever it is thinking about, e.g. giving it eyes and manipulators, if
+it is thinking about physical objects that can be moved around, or
+giving it a speaking voice and microphone if it is to engage in
+conversational interaction, as well as some sort of body to which people
+can relate when interacting with it.
+<p>
+But AI researchers and teachers have found ways of simplifying the tasks
+for beginner students so as to make introductory teaching feasible.
+<p>
+The simplification can include any or all of the following
+<ul>
+<li>
+Choosing an artificially simple type of behaviour or interaction, e.g. a
+simple chat-bot that does not really understand its inputs and outputs,
+or a program that interacts with a simple model of some world rather
+than the complex external reality that a future robot might have to
+interact with.
+<li>
+Providing library programs that perform some parts of the task or
+provide models of the world that the learner's program is to interact
+with or reason about. For example, a very simple planning program could
+use simulated actions in a simplified world modelled by a teacher's
+program; and a simple chatbot exercise might be based on a program whose
+architecture is provided by the teacher so that beginner students need
+only focus on the rules to be used by the chatbot.
+<li>
+Instead of requiring the learner to do everything using a general
+purpose programming language, and using standard primitive data-types
+(e.g. numbers, strings, arrays, records, etc.) the teacher can provide a
+problem-specific higher level language allowing the learner to think
+about the problem using a language suited to the problem rather than
+having to think all the time about the syntax of the base programming
+language.
+<p>
+This requires a programming language that is extendable by defining new
+syntactic constructs suited to particular applications. Many languages
+allow macros to be defined that extend the language. Some, like
+<a href="http://en.wikipedia.org/wiki/POP11">Pop-11</a>,
+allow more powerful extensions to the language, introducing constructs
+that would not have been expressible in the original language.
+</ul>
+A programming language that supports creative teachers in providing
+specific learning environments could have a core subset that is general
+purpose as well as features that allow the problem specific extensions
+to be provided in sharable libraries. This technique has been used for
+many years at Sussex university, at Birmingham University and some other
+universities, and also some industrial/commercial organisations using
+the Poplog system.
+<p>
+Initially this may be daunting for teachers, but if different teachers
+build useful and interesting learning "packages" of this sort, all using
+the same base programming language, then they can share their work with
+other teachers, and some of the simpler packages, e.g. a library
+defining a microworld, can be combined with other packages, e.g. a
+library with resources for natural language processing, to allow
+students to work on projects that build in the combination, e.g.
+designing a program that interacts in (a subset of) natural language,
+conversing about the domain.
+</blockquote>
+
+<h3><b>
+Example microworlds
+</b></h3>
+
+<ul>
+<li>
+Simple chatbots
+<li>
+A micro-language supporting actions performed in a simple puzzle world,
+e.g. the world of a 'river crossing puzzle'
+<li>
+A combination of the previous two to provide a conversational program
+that can talk about the river world, obeying commands and answering
+questions
+<li>
+A variant of the above might be a simulated conversational vending
+machine (some students like to produce a "stroppy" variant of such a
+machine.
+<li>
+A microworld in which simple actions can be performed that change
+locations and relationships of objects, and in which goals can be
+achieved that require the program to plan combinations of actions to
+achieve a new state.
+<li>
+A microworld using an 'agent simulation package' that allows students to
+build models of interacting agents, e.g. a sheepdog manipulated by a
+mouse and sheep that try to move away when the dog approaches.
+<li>
+A variant of that in which the dog works out how to steer one sheep,
+then later several sheep, into a pen.
+<li>
+A microworld in which some individuals have to be guarded against
+predators or other dangers by a nursemaid.
+<li>
+Many other simulations using microworlds supported by teacher-created
+libraries.
+</ul>
+<h3><b>
+Required resources
+</b></h3>
+Not all programming languages will be equally good at supporting such
+diverse forms of teaching. Some of the requirements for languages and
+programming environments to enable creative teachers to inspire their
+students were discussed in this paper:
+<blockquote>
+<small>
+<pre>
+Beginners need powerful systems,
+by Aaron Sloman,
+in <il>New horizons in educational computing,</il> Ed. Masoud Yazdani,
+Ellis Horwood Series In Artificial Intelligence, pp. 220--234, 1984,
+<a href="http://www.cs.bham.ac.uk/research/projects/cogaff/81-95.html#45,">http://www.cs.bham.ac.uk/research/projects/cogaff/81-95.html#45,</a>
+</pre>
+</small>
+</blockquote>
+<h3><b>
+Online videos
+</b></h3>
+<blockquote>
+A draft incomplete set of videos introducing some of these examples and
+the tools required to implement them can be found <a href="http://www.cs.bham.ac.uk/research/projects/poplog/cas-ai/vid.html">here.</a>
+Additional videos will be added, illustrating more techniques and more types of learning.
+</blockquote>
+<hr/>
+<p>
+<h3><B>
+Suggestions for improvement are welcome.
+</B></h3>
+<p>
+This file maintained by:
+<br>
+<a href="http://www.cs.bham.ac.uk/~axs/">Aaron Sloman</a>
+<br>
+Installed: 1 May 2012
+<br>
+Last Updated: 1 May 2012; 10 Jul 2015 (format)
+</FONT>
+</div>
+</BODY>
+</HTML>

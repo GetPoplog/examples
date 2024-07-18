@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>The Game of Life Programming language</title>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#000080" alink="#0000FF" vlink="#000080">
+<a href="http://www.computingatschool.org.uk/">
+<img alt="Computing At School"
+height="60" src="../ova/images/student-squaresSmall.png"/>
+<font size=4><b>Computing At School</b></font>
+</a>
+<a href="http://www.cs.bham.ac.uk/">
+    <img alt="School of Computer Science"
+    height="60" border="0"
+    src="http://www.cs.bham.ac.uk/~axs/fig/cs2.png"/>
+</a>
+<a href="http://www.bham.ac.uk/">
+<img alt="THE UNIVERSITY OF BIRMINGHAM"
+    height="60" border="0"
+    src="http://www.cs.bham.ac.uk/~axs/fig/ub4.png"/>
+</a>
+<hr/>
+
+<h3><b>
+Conway's Game of Life
+<br/>
+<small>
+(Notes for teachers of computing)
+<br/>
+The "game of life" described and demonstrated
+<a href="http://www.bitstorm.org/gameoflife/">here</a>
+and
+<a href="http://www.ibiblio.org/lifepatterns">here</a>
+illustrates
+<br/>
+an unusual kind of programming language, running on an unusual kind
+of computer.
+</small>
+</b></h3>
+
+<hr/>
+This is part of <a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples">a
+larger web site</a> on computing in schools,
+<br>
+introducing and
+motivating the use of AI programming, among other things.
+
+<hr/>
+
+<pre>
+This web site has an excellent applet (using java) with which you (or your
+pupils) can play (top left of page):
+
+    <a href="http://www.ibiblio.org/lifepatterns/">http://www.ibiblio.org/lifepatterns/</a>
+
+You can change the number of squares, zoom in or out, paint an initial
+configuration with the mouse (by clicking or dragging) start, vary the speed,
+stop/clear etc.
+
+Another, possibly simpler and easier one is <a href="http://www.bitstorm.org/gameoflife/">http://www.bitstorm.org/gameoflife/</a>
+
+You can introduce the idea that the 'game' is a special kind of computer, and
+the programming language to run it is the language of black patterns on the
+white display, or bits in a 2-D bitarray (possibly an infinite bitarray).
+
+And the peculiar thing about this language is that when goes through one 'step'
+starting with a program it produces another program, which, in turn can produce
+another program, etc.
+
+Unlike the bits in the bitarray memory of a von Neumann computer, which, in
+principle (via use of bits representing addresses) can influence any other part
+of the computer, the bits in the conway/life machine can only influence their
+neighbours directly, though chains of such influence can eventually have
+arbitrarily distant effects.
+
+A task for learners is try to find out how to make initial patterns that go on
+changing for a long time, without ending in either a stationary pattern or a
+pattern that just alternates between two states.
+
+Don't forget to click on stop even when the board appears to have stopped: the
+program need not know that it has stopped. (Why not?)
+
+Other tasks include trying to make big patterns that will 'wipe the board clean'
+in as few steps as possible, or patterns that will end up with large densely
+packed regions, etc.
+
+This can be done experimentally, but it may be possible for some experimenters
+to notice 'theorems' about the life world, so that they not only demonstrate
+what happens but prove that it must happen.
+
+E.g. what can you conclude if the intial configuration has two, or three, or
+four, or ... etc... dots in a diagonal line, with no gaps. (Make it run slowly
+to work out what's happening.)
+
+Does it make a difference if the diagonal has gaps in it?
+
+What if you start with a horizontal row of contiguous dots: one, two, thred,
+etc. How does the length of the line affect the result?
+
+What happens if the rows consist of alternating black and white squares? Why?
+
+What are the requirements for the initial system to produce a 'glider' a pattern
+that goes on moving indefinitely?
+
+Is it possible to make a glider that moves round in a circular path?
+
+What's the smallest initial configuration you can make that goes on changing for
+at least a thousand steps?
+
+Can you prove there isn't a smaller one?
+
+And many more.
+</pre>
+
+<hr>
+<h3><b>
+Could there be a 3-D version of the game of life, in a 3-D rectangular grid?
+<br/>
+What kinds of behaviours could it produce?
+</b></h3>
+<pre>
+Is it possible that biological evolution has produced something like a 3-D game
+of life in which the programming elements are molecules and the computer is the
+physical world?
+
+This is a wonderful domain in which to demonstrate that almost everything
+written about the nature of computation in textbooks for beginners is wrong, or
+to be more precise: what's written merely discusses a special subset of
+computations, and a special subset of programming languages, reflecting what the
+authors happen to have learnt.
+</pre>
+
+<hr/>
+<p>
+<h3><B>
+Suggestions for improvement are welcome.
+</B></h3>
+INSTALLED: 7 Mar 2012
+<br/>
+UPDATED:
+<br>
+Maintained by: <a href="http://www.cs.bham.ac.uk/~axs">Aaron Sloman</a>
+<br>
+Email: a.sloman@cs.bham.ac.uk
+<br>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/freepoplog.html">http://www.cs.bham.ac.uk/research/projects/poplog/freepoplog.html</a>
+<br>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/packages/simagent.html">http://www.cs.bham.ac.uk/research/projects/poplog/packages/simagent.html</a>
+</body>
+</html>

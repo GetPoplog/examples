@@ -1,0 +1,81 @@
+<html>
+<h3><b>
+An example of Exploratory Programming
+<br/>
+Russell's Paradox and the Barber
+</b></h3>
+
+<pre>
+This is part of the introduction to Thinky Programming here:
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples">http://www.cs.bham.ac.uk/research/projects/poplog/examples</a>
+
+Russell's paradox (The set of all sets that do not contain themselves, must
+contain itself if it doesn't, and cannot contain itself if it does - so it
+does and it does not...) is connected with the Barber problem (finding the
+barber who shaves all and only the shavers who do not shave themselves).
+
+The barber problem could easily be turned into a game to stimulate young
+kids to think: using any action that can be performed on someone else or on
+oneself. E.g. everyone gets a sticky label to stick on someone else or on
+themselves.
+
+The class is divided into two groups each with the problem of working out
+how each member can decide to stick his/her label on someone else, or on
+him/her self. The winning group is the first group that manages to do that
+in such a way that one person in the group satisfies the barber condition
+(sticks a label on all and only those in the group who do not stick the
+label on themselves).
+
+How long will it take kids of age X to discover that there can be no
+winning group, and work out why not? (X = 6, 7, 8, ....17?)
+
+Then if they have access to a programming language (e.g. lisp, scheme,
+pop11, ...) that treats functions as first class objects (e.g. they can be
+passed as parameters) they can explore the consequences of trying to define
+a predicate that takes a procedure as input and returns true for all and
+only those procedures that return true when applied to themselves.
+
+In Pop11 (see <a href="http://en.wikipedia.org/wiki/POP-11">http://en.wikipedia.org/wiki/POP-11</a>)
+
+    define barber(f);
+
+        not(f(f))
+
+    enddefine;
+
+Test it:
+
+    barber(isnumber) =>
+    ** <true>
+
+    barber(isword) =>
+    ** <true>
+
+    barber(isprocedure) =>
+    ** <false>
+
+    barber(barber) =>
+    ;;; MISHAP - rle: RECURSION LIMIT (pop_callstack_lim) EXCEEDED
+
+(what difference does tail recursion optimisation make?).
+
+Learners who have been through those exercises will have their minds
+stretched in ways that help to prepare them for study of the deep
+ideas of Turing and others, and modern variants.
+
+They may, as a result, be better able to understand some of the deep
+problems of producing provably reliable systems, for example.
+
+<b>QUESTION:</b> What happens if the 'not' is removed from the definition
+of procedure barber?
+
+Can there be a barber who shaves all and only those barbers who do shave
+themselves?
+
+What about a set that contains all and only those sets that contain
+themselves?
+
+[References to be added]
+</pre>
+
+</html>

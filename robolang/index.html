@@ -1,0 +1,194 @@
+<HTML><HEAD> <TITLE>FREE TEACHING TOOLS -- Grammars, Parsing and Generation</TITLE>
+<HEAD>
+<BODY bgcolor="#ffffff" text="#000000" link="#000080" alink="#0000FF" vlink="#000080">
+<FONT color="#000000">
+<CENTER>
+<h3>
+<small>
+<a href="http://www.cs.bham.ac.uk/"> School of Computer Science</a>
+--
+<a href="http://www.cs.bham.ac.uk/"> The University of Birmingham</a>
+<br>
+In collaboration with
+The University of Sussex:
+<br>
+<a href="http://www.sussex.ac.uk/informatics/">Informatics Department</a>
+and <a href="http://www.sussex.ac.uk/cogs">Centre for Research in Cognitive Science</a>
+</small>
+<p>
+<small>
+This is part of the
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/freepoplog.html">Free Poplog Portal</a>
+</small>
+</h3>
+<hr/>
+
+<h2><b>
+Examples of teaching and demonstration materials
+<br/>
+concerned with parsing and grammars for natural language
+<br/>
+<small>
+This is part of the web site on learning to do 'Thinky' Programming
+<br/>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples">http://www.cs.bham.ac.uk/research/projects/poplog/examples</a>
+</small>
+</b></h2>
+</CENTER>
+<hr/>
+<b>NB</b>
+<br/>
+The files with the '.p' suffix include Pop-11 code and comments. They
+should be treated as plain text files. If your browser cannot read them
+that may be because it associated '.p' with another type of file. You
+may have to use the 'Open with' option in your web browser (usually via
+right click, depending on the browser.)
+<br/>
+All of these examples can be run in the Pop-11 system that is part of Poplog,
+available for use in a virtual linux that runs on windows, macs, etc.
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/ova/A-README.html">here</a>,
+or downloadable for installation in a linux system
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/latest-poplog">here.</a>
+<hr/>
+<p>
+<b>CONTENTS</b>
+<ul>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/CONTENTS.html">This
+file: CONTENTS.html</a>
+<p>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/grammar.txt">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/grammar.txt</a>
+<br/>
+An introduction (for absolute beginners) ideas of grammar, grammatical structures,
+lexicon, lexical types, grammar-based random generation of sentences, parsing of
+sentences.
+<p>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/grammarexamples">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/grammarexamples</a>
+<br/>
+Examples of things that can be done by learners after being introduced to the
+grammar formalism and the library designed for using the grammars to generate or
+parse sentences.
+<p>
+<li>
+<b>NOT FOR NOVICES TO READ</b>
+<br/>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/grammar.p">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/grammar.p</a>
+<br/>
+Lightly commented, Pop-11 source code for the LIB GRAMMAR package that makes all the
+above work. It depends on use of the Pop-11 matcher for list structures. [ADD LINK]
+<p>
+<li>
+<b>NOT FOR NOVICES TO READ</b>
+<br/>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/newgrammar.p">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/newgrammar.p</a>
+<br/>
+    A modified version of Pop-11 LIB GRAMMAR to support use of an ill-formed
+    substring table to speed up parsing (with spectacular results).
+<br/>
+    This, like the original library, finds only one parse, even if the input string
+    is ambiguous according to the grammar.
+<br/>
+    To find where this differs from the original library look for occurrences of
+    the global variable <tt>no_parse_found</tt> and calls of the procedure
+    <tt>setup_noparses();</tt>
+<p>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/robogram.p">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/robogram.p</a>
+<br/>
+    A grammar for an artificial subset of English relevant to a
+    conversational robot.
+    <br/>
+    This shows how, using Pop-11's formalism for recursive context-free grammars, it
+is possible to define a fairly complex grammar for assertions, questions and
+commands, for the domain of a robot with the ability to perceive and
+manipulate objects on a table.
+    <br/>
+    (As in the CoSy and CogX robot projects at Birmingham.)
+<p>
+Using the standard Pop-11 grammar library, parsing sentences of the sorts generated
+by this grammar can be very slow.
+<p>
+Using <b>newgrammar.p,</b> with the ill-formed substring memory, speeds
+that up enormously. (The memory is cleared and rebuilt for each
+sentence. The program could be changed to create an enduring memory of
+things not to try.)
+<p>
+This grammar was hand-coded, using an idea suggested long ago by Gerald Gazdar,
+namely compiling semantic categories into syntactic categories. In a more ambitious
+project it might be possible to make a system that can learn such a grammar by being
+exposed to a very large corpus of examples.
+<p>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/robolex.p">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/robolex.p</a>
+<br/>
+    A lexicon for use with the above grammar, i.e. words to be used in statements,
+commands, and questions referring to the robot and its environment and actions.
+<br/>
+This package has no understanding of inflections: different forms for the same word,
+depending on context of use. All words are treated as  unanalysed wholes, except for
+the use of apostrophes.
+<p>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/robolang_demo.p">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/robolang_demo.p</a>
+<br/>
+    Example code for compiling and testing the grammar and lexicon,
+    using the tools in newgrammar.p
+    <p>
+    This includes some examples that invoke the linux 'espeak' program to say the
+    generated sentences out loud.
+<p>
+<li>
+<a href="http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/test.p">http://www.cs.bham.ac.uk/research/projects/poplog/examples/robolang/test.p</a>
+<br/>
+One test sentence parsed, to show the sort of parse tree produced. The sentence is
+
+<small>
+<pre>
+[move the big red box on the tray onto the top of the block on the left side of Jeremy"s triangular horse]
+</pre>
+</small>
+The parse tree is too big to be displayed easily, though it can be displayed in an
+xterm-compatible window, or using the poplog XVed editor.
+<p>
+A screen-shot of the tree displayed in an xterm window with a small font is below,
+<br/>
+automatically generated by the Pop-11 'showtree' library package.
+
+<pre>
+    <img alt="parse tree" width="600" src="parse-tree.png"/>
+</pre>
+
+
+</ul>
+
+
+<b>This list may be extended.</b>
+<br/>
+
+
+<hr/>
+<p>
+<h3><B>
+Suggestions for improvement are welcome.
+</B></h3>
+<p>
+This file maintained by:
+<a href="http://www.cs.bham.ac.uk/~axs/">Aaron Sloman</a>
+<br>
+School of Computer Science, University of Birmingham
+<br>
+Installed: 13 Jun 2011
+<br>
+Last Updated: 14 Jun 2011
+
+<pre>
+Aaron Sloman
+http://www.cs.bham.ac.uk/~axs
+
+</pre>
+
+</FONT>
+</BODY>
+</HTML>
